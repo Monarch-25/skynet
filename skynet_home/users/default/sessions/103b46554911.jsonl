@@ -1,0 +1,2 @@
+{"role": "user", "content": "save this."}
+{"role": "assistant", "content": "Based on the source folder, the Transformer computes attention via scaled dot-product attention: it takes queries and keys of dimension d_k, computes their dot products, scales by 1/sqrt(d_k), and applies softmax to get weights over the values.\n\nSource: knowledge_source/attention-is-all-you-need.md#3.2.1"}

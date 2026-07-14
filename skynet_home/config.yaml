@@ -1,0 +1,30 @@
+provider:
+  active: zai                # zai | bedrock | mock
+  zai:
+    model: glm-5.2
+    base_url: https://api.z.ai/api/paas/v4/
+  bedrock:
+    model: anthropic.claude-sonnet-4-20250514-v1:0
+    region: us-east-1
+  mock:
+    model: mock-glm
+
+context:
+  threshold_percent: 0.5      # compact when context hits this fraction of window
+  protect_tail_tokens: 8000
+  max_summary_tokens: 3000
+  max_iterations: 8           # tool-call loop cap per turn
+
+memory:
+  user_md_char_cap: 1500
+  memory_md_char_cap: 2500
+
+retrieval:
+  backend: bm25               # bm25 | embedding | hybrid
+  chunk_tokens: 650
+  chunk_overlap: 100
+  top_k_default: 6
+
+paths:
+  knowledge_source: ./knowledge_source
+  internal_kb: ./internal_kb

@@ -1,0 +1,11 @@
+# Gateway runtime dependencies.
+# Z.AI is OpenAI-compatible, so we talk to it through langchain-openai's
+# ChatOpenAI pointed at the Z.AI base_url (see gateway/providers.py).
+langchain>=0.1
+langchain-openai>=0.1
+openai>=1.0
+python-dotenv>=1.0      # optional at runtime, used for .env auto-loading
+
+# --- Reserved for the future Bedrock provider (gateway/providers.py:_build_bedrock)
+# langchain-aws>=0.1
+# boto3>=1.34
